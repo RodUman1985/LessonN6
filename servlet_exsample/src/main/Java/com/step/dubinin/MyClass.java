@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet (urlPatterns = ("/welcome"))
+@WebServlet (urlPatterns = ("/"))
 public class MyClass extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -17,12 +17,17 @@ public class MyClass extends HttpServlet {
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <title>Java</title>\n" +
                 "</head>\n" +
-                "<body>\n" +
+                "<body >\n" +
+                "<div>"+
+                "<h1 align=\"centr\">Welcome to online shop!!!</h1>\n" +
                 "<form action=\"/shop\" method=\"get\">\n" +
                 "    <input type=\"text\" name=\"userName\">\n" +
+                "    <h1></h1>\n" + "<p align=\"centr\"> <input type=\"checkbox\"name=\"check\"> Please, push this</p>"+
                 "    <input type=\"submit\" value=\"submit\">\n" +
                 "</form>\n" +
+                "<div>"+
                 "</body>\n" +
                 "</html>");
     }
+
 }
